@@ -1,0 +1,87 @@
+body{
+    background: lightyellow url("https://github.com/Falx777/my/blob/main/alfabetoImg/workspace.png?raw=true") repeat fixed center;
+}
+#ImgText{
+  top:100px;
+  background-color:rgb(224, 224, 201);
+  position:absolute;
+  left:10%;
+  right:10%;
+  display:flex;
+  justify-content:center;
+  border-radius:10px;
+  box-shadow: 10px 10px 10px black;
+  border-style:outset;
+  border-width:8px;
+}
+
+.ImgLetras{
+  position:absolute;
+  left:10px;
+  width:35px;
+  length:35px;
+
+}
+
+textarea{
+  position:absolute;
+  right:0%;
+  left:0%;
+  margin-inline: 200px;
+  resize: none;
+  border-radius:10px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.btns{
+  position:absolute;
+  top:65px;
+  left:0%;
+  right:0%;
+  display:flex;
+  justify-content:center;
+
+}
+
+button{
+  border-radius: 5px;
+  padding:8px;
+  margin-inline:5px;
+  font-size:14px;
+  font-weight: bold;
+  border-style: none;
+  cursor:pointer;
+  box-shadow: 2px 2px 2px black;
+}
+
+button.convert{
+  background-color: lightgreen;
+}
+
+button.clean{
+  background-color: lightyellow;
+}
+
+button.down{
+  background-color: lightblue;
+}
+
+button:hover{
+  transform:scale(1.2);
+  transition: transform .4s;
+}
+
+button:active{
+  color:white;
+  background-color: white;
+  transform:scale(1);
+  transition: .2s;
+}
+
+@media only screen and (max-width: 600px) {
+  textarea{
+    right:0%;
+  left:0%;
+  margin-inline: 25px;
+  }
+}
