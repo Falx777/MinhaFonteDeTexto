@@ -1,4 +1,5 @@
-var baseURL = 'https://github.com/Falx777/my/blob/main/alfabetoImg/'
+//var baseURL = 'https://github.com/Falx777/my/blob/main/alfabetoImg/'
+var baseURL = '../MinhaFonteDeTexto/meusCaracteres/'
 var url = []
 
 var canvas = document.getElementById('canvas');
@@ -49,7 +50,8 @@ function converterTexto(){
     caractere = textoBase[i];
       }
 
-      url.push(baseURL +caractere + minus+'.png?raw=true')
+      //url.push(baseURL +caractere + minus+'.png?raw=true')
+      url.push(baseURL +caractere + minus+'.png')
     }else{
       url.push(" ")
     }
