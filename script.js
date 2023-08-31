@@ -1,5 +1,5 @@
 //var baseURL = 'https://github.com/Falx777/my/blob/main/alfabetoImg/'
-var baseURL = '../MinhaFonteDeTexto/meusCaracteres/'
+var baseURL = 'meusCaracteres/'
 var url = []
 
 var canvas = document.getElementById('canvas');
