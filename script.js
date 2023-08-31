@@ -155,10 +155,11 @@ function clearAll(){
 }
 
 function download(){
-  var imgData = ctx.createImageData(920, 800);
+  //var imgData = ctx.createImageData(920, 800);
+  var im = canvas.toDataURL('image/jpeg');
   var tmpLink = document.createElement( 'a' );  
   tmpLink.download = 'conversao.png'; 
-  tmpLink.href = imgData;
+  tmpLink.href = im;
   document.body.appendChild( tmpLink );  
   tmpLink.click();  
   document.body.removeChild( tmpLink );
