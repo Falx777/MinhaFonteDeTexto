@@ -88,7 +88,7 @@ button:active{
 }
   
 
-@media (max-width: 600px) {
+@media (max-device-width: 600px) {
   textarea{
     right:0%;
   left:0%;
