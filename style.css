@@ -33,6 +33,14 @@ textarea{
   box-shadow: 2px 2px 2px black;
 }
 
+label{
+  position:relative;
+  color:white;
+  font-family:arial;
+  font-weight:bold;
+  top:7px;
+}
+
 .btns{
   position:absolute;
   top:65px;
@@ -82,6 +90,29 @@ button:active{
   textarea{
     right:0%;
   left:0%;
-  margin-inline: 15px;
+  margin-inline: 25px;
+  }
+  .btns{
+  position:fixed;
+  top:600px;
+  left:0%;
+  right:0%;
+  display:flex;
+  justify-content:center;
+  transform: scale(1.6);
+  z-index:2000;
+}
+  canvas{
+    transform:scale(0.3) translate(0px,-700px);
+  }
+  label{
+  position:absolute;
+  color:black;
+  top:35px;
+}
+  #fundoCaderno{
+    position:absolute;
+    top:35px;
+    margin-left:100px;
   }
 }
