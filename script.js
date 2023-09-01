@@ -8,7 +8,7 @@ var dbImagesLetras = []
 //var newImage = new Image(); 
 
 function converterTexto(){
-  var textoBase = (document.getElementById("texto").value).split('');
+  var textoBase = ((document.getElementById("texto").value).replace(/\n/g," ")).split('');
     
   for(i=0; i < textoBase.length; i++){
     
@@ -155,7 +155,7 @@ function converterTexto(){
         normalSpace = 3
       }
       if(i >1){
-         if(textoBase[i-1] == "i" || textoBase[i] == "l" || textoBase[i-1] == "l"){
+         if(textoBase[i-1] == "i" || textoBase[i] == "l"){
         normalSpace = 5
       }
          if((textoBase[i-1] == textoBase[i-1].toUpperCase() && textoBase[i-1] != " ") || textoBase[i]== "v"){
