@@ -88,7 +88,7 @@ button:active{
 }
   
 
-@media screen and (min-width: 10px),  screen and (max-width:600px){
+@media screen and (max-width:600px){
   textarea{
     right:0%;
   left:0%;
