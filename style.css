@@ -1,27 +1,5 @@
-body{
-    background: lightyellow url("https://github.com/Falx777/my/blob/main/alfabetoImg/workspace.png?raw=true") repeat fixed center;
-}
-#ImgText{
-  top:100px;
-  background-color:rgb(224, 224, 201);
-  position:absolute;
-  left:10%;
-  right:10%;
-  display:flex;
-  justify-content:center;
-  border-radius:10px;
-  box-shadow: 10px 10px 10px black;
-  border-style:outset;
-  border-width:8px;
-}
 
-.ImgLetras{
-  position:absolute;
-  left:10px;
-  width:35px;
-  length:35px;
-
-}
+@media only screen and (min-width: 600px) {
 
 textarea{
   position:absolute;
@@ -49,8 +27,33 @@ label{
   display:flex;
   justify-content:center;
 
+ }
 }
 
+ body{
+    background: lightyellow url("https://github.com/Falx777/my/blob/main/alfabetoImg/workspace.png?raw=true") repeat fixed center;
+}
+#ImgText{
+  top:100px;
+  background-color:rgb(224, 224, 201);
+  position:absolute;
+  left:10%;
+  right:10%;
+  display:flex;
+  justify-content:center;
+  border-radius:10px;
+  box-shadow: 10px 10px 10px black;
+  border-style:outset;
+  border-width:8px;
+}
+
+.ImgLetras{
+  position:absolute;
+  left:10px;
+  width:35px;
+  length:35px;
+
+}
 button{
   border-radius: 5px;
   padding:8px;
@@ -85,9 +88,7 @@ button:active{
   transform:scale(1);
   transition: .2s;
 }
-
-@media only screen and (max-width: 600px) {
-  textarea{
+textarea{
     right:0%;
   left:0%;
   margin-inline: 25px;
@@ -115,4 +116,3 @@ button:active{
     top:35px;
     margin-left:100px;
   }
-}
