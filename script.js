@@ -127,6 +127,29 @@ function converterTexto(){
         breakLine = 500
         spaceLine = i - 500
       }
+      
+      if (i >=550 && i < 600){
+        breakLine = 550
+        spaceLine = i - 550
+      }
+      if (i >=600 && i < 650){
+        breakLine = 600
+        spaceLine = i - 600
+      }
+      
+      if (i >=650 && i < 700){
+        breakLine = 650
+        spaceLine = i - 650
+      }
+      if (i >=700 && i < 750){
+        breakLine = 700
+        spaceLine = i - 700
+      }
+      
+      if (i >=750 && i < 800){
+        breakLine = 750
+        spaceLine = i - 750
+      }
       var normalSpace = 0
       if(textoBase[i] == "i" || textoBase[i] == "l" || textoBase[i] == "í"){
         normalSpace = 3
@@ -164,3 +187,21 @@ function download(){
   tmpLink.click();  
   document.body.removeChild( tmpLink );
 }
+
+function putBackground(){
+  clearAll()
+  var inpt = document.getElementById("fundoCaderno").value
+  if(inpt == "on"){
+     
+    document.getElementById("fundoCaderno").value = "off"
+  }else if(inpt == "off"){
+      var imgPaper = new Image()
+      imgPaper.src = "meusCaracteres/backgroundPage.png"
+      imgPaper.onload = function(){
+      ctx.drawImage(imgPaper,90,170,2050,1600,0,0,920,800);
+      }
+    document.getElementById("fundoCaderno").value = "on"
+    }
+}
+
+
