@@ -1,5 +1,5 @@
 
-@media screen and (min-display-width: 10px){
+@media screen and (min-width: 10px){
   textarea{
   position:absolute;
   resize: none;
@@ -12,12 +12,12 @@
   
   .btns{
   position:fixed;
-  top:600px;
+  top:900px;
   left:0%;
   right:0%;
   display:flex;
   justify-content:center;
-  transform: scale(1.6);
+  transform: scale(2.3);
   z-index:2000;
 }
   canvas{
@@ -63,7 +63,7 @@ body{
 
 }
 
-@media screen and (min-display-width:601px){
+@media screen and (min-width:601px){
 textarea{
   position:absolute;
   right:0%;
