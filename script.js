@@ -88,66 +88,65 @@ function converterTexto(){
       var spaceLine = i;
       var breakLine = 0;
       if (i >=50 && i < 100){
-        breakLine = 50
+        breakLine = 45
         spaceLine = i - 50
       }
       if (i >=100 && i < 150){
-        breakLine = 100
+        breakLine = 85
         spaceLine = i - 100
       }
       if (i >=150 && i < 200){
-        breakLine = 150
+        breakLine = 130
         spaceLine = i - 150
       }
       if (i >=200 && i < 250){
-        breakLine = 200
+        breakLine = 175
         spaceLine = i - 200
       }
       if (i >=250 && i < 300){
-        breakLine = 250
+        breakLine = 220
         spaceLine = i - 250
       }
       if (i >=300 && i < 350){
-        breakLine = 300
+        breakLine = 263
         spaceLine = i - 300
       }
       if (i >=350 && i < 400){
-        breakLine = 350
+        breakLine = 303
         spaceLine = i - 350
       }
       if (i >=400 && i < 450){
-        breakLine = 400
+        breakLine = 343
         spaceLine = i - 400
       }
       if (i >=450 && i < 500){
-        breakLine = 450
+        breakLine = 387
         spaceLine = i - 450
       }
       if (i >=500 && i < 550){
-        breakLine = 500
+        breakLine = 430
         spaceLine = i - 500
       }
-      
       if (i >=550 && i < 600){
-        breakLine = 550
+        breakLine = 473
         spaceLine = i - 550
       }
       if (i >=600 && i < 650){
-        breakLine = 600
+        breakLine = 520
         spaceLine = i - 600
       }
       
       if (i >=650 && i < 700){
-        breakLine = 650
+        breakLine = 565
         spaceLine = i - 650
       }
       if (i >=700 && i < 750){
-        breakLine = 700
+        breakLine = 605
         spaceLine = i - 700
       }
       
       if (i >=750 && i < 800){
-        breakLine = 750
+        breakLine = 645
         spaceLine = i - 750
       }
       var normalSpace = 0
