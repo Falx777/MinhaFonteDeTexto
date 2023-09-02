@@ -80,7 +80,7 @@ function converterTexto(){
         } 
       }
     }
-  
+   var normalSpace = 0
   function imagePrint(){
     var textoBase = (document.getElementById("texto").value).split('');
     for(i=0; i < dbImagesLetras.length; i++){
@@ -149,17 +149,21 @@ function converterTexto(){
         breakLine = 645
         spaceLine = i - 750
       }
-      var normalSpace = 0
+      
+      //if(textoBase[i] == "i" || textoBase[i] == "l" || textoBase[i] == "í"){
+       // normalSpace = 3
+      //}
+      //if(i >1){
+      //   if(textoBase[i-1] == "i" || textoBase[i] == "l"){
+      //  normalSpace = 5
+      //}
+      //   if((textoBase[i-1] == textoBase[i-1].toUpperCase() && textoBase[i-1] != " ") || textoBase[i]== "v"){
+      //  normalSpace = -6
+      //}
+      //}
       if(textoBase[i] == "i" || textoBase[i] == "l" || textoBase[i] == "í"){
-        normalSpace = 3
-      }
-      if(i >1){
-         if(textoBase[i-1] == "i" || textoBase[i] == "l"){
-        normalSpace = 5
-      }
-         if((textoBase[i-1] == textoBase[i-1].toUpperCase() && textoBase[i-1] != " ") || textoBase[i]== "v"){
-        normalSpace = -6
-      }
+        //normalSpace = 7
+        normalSpace += 6
       }
       
           if(dbImagesLetras[i].src != "https:"){
