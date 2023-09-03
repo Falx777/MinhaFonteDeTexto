@@ -6,10 +6,8 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var dbImagesLetras = []
 //var newImage = new Image(); 
-
 function converterTexto(){
   var textoBase = ((document.getElementById("texto").value).replace(/\n/g," ")).split('');
-    
   for(i=0; i < textoBase.length; i++){
     
     var minus = "_"
@@ -50,8 +48,7 @@ function converterTexto(){
     caractere = textoBase[i];
       }
 
-      //url.push(baseURL +caractere + minus+'.png?raw=true')
-      url.push(baseURL +caractere + minus+'.png')
+      url.push(baseURL +caractere + minus+'.png?raw=true')
     }else{
       url.push(" ")
     }
@@ -80,22 +77,24 @@ function converterTexto(){
         } 
       }
     }
-   var normalSpace = 0
+    var normalSpace = 0
+    var tempBreakLine = 0
   function imagePrint(){
-    var textoBase = (document.getElementById("texto").value).split('');
+    var textoBase = ((document.getElementById("texto").value).replace(/\n/g," ")).split('');;
     for(i=0; i < dbImagesLetras.length; i++){
-      //console.log(dbImagesLetras)      
+      
       var spaceLine = i;
       var breakLine = 0;
+      
       if (i >=50 && i < 100){
         breakLine = 45
-        spaceLine = i - 50
+        spaceLine = i - 50 
       }
       if (i >=100 && i < 150){
         breakLine = 85
-        spaceLine = i - 100
+        spaceLine = i - 100 
       }
-      if (i >=150 && i < 200){
+      if (i >= 150&& i < 200){
         breakLine = 130
         spaceLine = i - 150
       }
@@ -149,21 +148,15 @@ function converterTexto(){
         breakLine = 645
         spaceLine = i - 750
       }
+      if (tempBreakLine != breakLine){
+        normalSpace = 0
+      }
+      tempBreakLine = breakLine
       
-      //if(textoBase[i] == "i" || textoBase[i] == "l" || textoBase[i] == "í"){
-       // normalSpace = 3
-      //}
-      //if(i >1){
-      //   if(textoBase[i-1] == "i" || textoBase[i] == "l"){
-      //  normalSpace = 5
-      //}
-      //   if((textoBase[i-1] == textoBase[i-1].toUpperCase() && textoBase[i-1] != " ") || textoBase[i]== "v"){
-      //  normalSpace = -6
-      //}
-      //}
-      if(textoBase[i] == "i" || textoBase[i] == "l" || textoBase[i] == "í"){
-        //normalSpace = 7
-        normalSpace += 6
+      if(baseURL != 'https://github.com/Falx777/MinhaFonteDeTexto/blob/main/Forma/') {
+        if(textoBase[i] == "i" || textoBase[i] == "l" || textoBase[i] == "í"){
+          normalSpace += 6
+        }       
       }
       
           if(dbImagesLetras[i].src != "https:"){
@@ -174,9 +167,53 @@ function converterTexto(){
       }
   }
 
-function clearAll(){
-  url = []
+
+
+
+
+
+function putBackground(){
+  var inpt = document.getElementById("fundoCaderno").value
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  url = []  
+  dbImagesLetras = []  
+  if(inpt == "on"){
+      document.getElementById("fundoCaderno").style.backgroundColor = "lightgray";
+      document.getElementById("fundoCaderno").value = "off"
+  }else if(inpt == "off"){
+      document.getElementById("fundoCaderno").style.backgroundColor = "red";
+      var imgPaper = new Image()
+      imgPaper.src = "https://github.com/Falx777/MinhaFonteDeTexto/blob/main/meusCaracteres/backgroundPage.png?raw=true"
+      imgPaper.onload = function(){
+      ctx.drawImage(imgPaper,90,170,2050,1600,0,0,920,800);
+      }
+    document.getElementById("fundoCaderno").value = "on"
+    }
+}
+
+function changeStyle(){
+  var inpt = document.getElementById("forma").value
+
+  baseURL = 'https://github.com/Falx777/MinhaFonteDeTexto/blob/main/meusCaracteres/'
+  if(inpt == "on"){
+      document.getElementById("forma").style.backgroundColor = "lightgray";
+    document.getElementById("forma").value = "off"
+  }else if(inpt == "off"){
+      document.getElementById("forma").style.backgroundColor = "red";
+      baseURL = 'https://github.com/Falx777/MinhaFonteDeTexto/blob/main/Forma/'
+    document.getElementById("forma").value = "on"
+  }
+    
+
+}
+
+function clearAll(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  var inpt = document.getElementById("fundoCaderno").value
+  if(inpt == "on"){
+    putBackground()    
+  }
+  url = []  
   dbImagesLetras = []  
 }
 
@@ -190,21 +227,3 @@ function download(){
   tmpLink.click();  
   document.body.removeChild( tmpLink );
 }
-
-function putBackground(){
-  clearAll()
-  var inpt = document.getElementById("fundoCaderno").value
-  if(inpt == "on"){
-     
-    document.getElementById("fundoCaderno").value = "off"
-  }else if(inpt == "off"){
-      var imgPaper = new Image()
-      imgPaper.src = "meusCaracteres/backgroundPage.png"
-      imgPaper.onload = function(){
-      ctx.drawImage(imgPaper,90,170,2050,1600,0,0,920,800);
-      }
-    document.getElementById("fundoCaderno").value = "on"
-    }
-}
-
-
