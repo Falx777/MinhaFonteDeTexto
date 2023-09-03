@@ -21,7 +21,8 @@
   z-index:2000;
 }
   canvas{
-    transform:scale(0.3) translate(0px,-700px);
+    height:280px;
+    transform:scale(0.9) translate(0px,00px);
   }
   label{
   position:absolute;
