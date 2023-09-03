@@ -12,12 +12,12 @@
   
   .btns{
   position:fixed;
-  top:900px;
+  top:600px;
   left:0%;
   right:0%;
   display:flex;
   justify-content:center;
-  transform: scale(2.3);
+  transform: scale(1.6);
   z-index:2000;
 }
   canvas{
@@ -35,6 +35,21 @@
     top:35px;
     margin-left:100px;
   }
+  
+   .fnd{
+  position:absolute;
+  color:black;
+  top:60px;
+  font-family:arial;
+  font-weight:bold;
+}
+  
+  #forma{
+    position:absolute;
+    top:60px;
+    margin-left:100px;
+  }
+  
 }
 
 
@@ -97,6 +112,20 @@ label{
     margin-left:5px;
   }
   
+   .fnd{
+  position:relative;
+  color:white;
+  font-family:arial;
+  font-weight:bold;
+  top:6px;
+}
+  
+  #forma{
+   position:relative;
+    top:0px;
+    margin-left:5px;
+  }
+  
    canvas{
     transform:scale(1) translate(0px,00px);
   }
@@ -137,6 +166,3 @@ button:active{
   transform:scale(1);
   transition: .2s;
 }
-
-
-  
