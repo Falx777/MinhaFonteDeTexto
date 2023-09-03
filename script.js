@@ -159,7 +159,7 @@ function converterTexto(){
       }
       tempBreakLine = breakLine
       
-      if(baseURL != 'https://github.com/Falx777/MinhaFonteDeTexto/blob/main/Forma/') {
+      if(baseURL != 'Forma/') {
         if(textoBase[i] == "i" || textoBase[i] == "l" || textoBase[i] == "í"){
           normalSpace += 6
         }       
@@ -189,7 +189,7 @@ function putBackground(){
   }else if(inpt == "off"){
       document.getElementById("fundoCaderno").style.backgroundColor = "red";
       var imgPaper = new Image()
-      imgPaper.src = "https://github.com/Falx777/MinhaFonteDeTexto/blob/main/meusCaracteres/backgroundPage.png?raw=true"
+      imgPaper.src = "meusCaracteres/backgroundPage.png"
       imgPaper.onload = function(){
       ctx.drawImage(imgPaper,90,170,2050,1600,0,0,920,800);
       }
@@ -200,13 +200,13 @@ function putBackground(){
 function changeStyle(){
   var inpt = document.getElementById("forma").value
 
-  baseURL = 'https://github.com/Falx777/MinhaFonteDeTexto/blob/main/meusCaracteres/'
+  baseURL = 'meusCaracteres/'
   if(inpt == "on"){
       document.getElementById("forma").style.backgroundColor = "lightgray";
     document.getElementById("forma").value = "off"
   }else if(inpt == "off"){
       document.getElementById("forma").style.backgroundColor = "red";
-      baseURL = 'https://github.com/Falx777/MinhaFonteDeTexto/blob/main/Forma/'
+      baseURL = 'Forma/'
     document.getElementById("forma").value = "on"
   }
     
