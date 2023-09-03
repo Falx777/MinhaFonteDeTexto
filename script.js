@@ -44,6 +44,12 @@ function converterTexto(){
           case 'ç':
           caractere = 'ccid'
     break;
+          case '#':
+           caractere = '%23'
+    break;
+          case '%':
+           caractere = '%25'
+    break;
   default:
     caractere = textoBase[i];
       }
