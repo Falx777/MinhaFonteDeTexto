@@ -105,15 +105,15 @@ function converterTexto(){
         spaceLine = i - 150
       }
       if (i >=200 && i < 250){
-        breakLine = 175
+        breakLine = 172
         spaceLine = i - 200
       }
       if (i >=250 && i < 300){
-        breakLine = 220
+        breakLine = 217
         spaceLine = i - 250
       }
       if (i >=300 && i < 350){
-        breakLine = 263
+        breakLine = 260
         spaceLine = i - 300
       }
       if (i >=350 && i < 400){
