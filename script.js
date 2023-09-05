@@ -215,12 +215,16 @@ function changeStyle(){
 
 function clearAll(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  var inpt = document.getElementById("fundoCaderno").value
-  if(inpt == "on"){
-    putBackground()    
-  }
   url = []  
   dbImagesLetras = []  
+  var inpt = document.getElementById("fundoCaderno").value
+  if(inpt == "on"){
+ var imgPaper = new Image()
+      imgPaper.src = "/meusCaracteres/backgroundPage.png"
+      imgPaper.onload = function(){
+      ctx.drawImage(imgPaper,90,170,2050,1600,0,0,920,800);
+  }
+  }
 }
 
 function download(){
