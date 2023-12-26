@@ -62,13 +62,22 @@ function converterTexto(){
   
   for(i=0; i < textoBase.length; i++){
     var newImage = new Image(); 
-    if(url[i] != " "){
+     if(! url[i].includes(" ") ){
+          newImage.src = url[i]
+          dbImagesLetras.push(newImage)
+      }else{
+        newImage.src = url[i].replace(' ','space')
+        
+         dbImagesLetras.push(newImage)
+      }  
+    
+    /*if(url[i] != " "){
       newImage.src = url[i]
       dbImagesLetras.push(newImage)
     }else{
       newImage.src = "https://"
        dbImagesLetras.push(newImage)
-    }  
+    } */ 
   }
   var allLoaded = 0;
   var allImages = 0;
