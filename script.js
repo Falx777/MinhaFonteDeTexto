@@ -7,12 +7,14 @@ var ctx = canvas.getContext('2d');
 var dbImagesLetras = []
 //var newImage = new Image(); 
 function converterTexto(){
+  //var textoBase = ((document.getElementById("texto").value).replace(""," ")).split('');
   var textoBase = ((document.getElementById("texto").value).replace(/\n/g," ")).split('');
   for(i=0; i < textoBase.length; i++){
     
     var minus = "_"
     var caractere = ""
-    if(textoBase[i] != " "){
+    if(textoBase[i] != ""){
+      
       if (textoBase[i].toUpperCase() == textoBase[i]){
         minus = ""
       }
@@ -55,29 +57,23 @@ function converterTexto(){
       }
 
       url.push(baseURL +caractere + minus+'.png?raw=true')
+      
     }else{
       url.push(" ")
+      
     }
   }
   
   for(i=0; i < textoBase.length; i++){
     var newImage = new Image(); 
-     if(! url[i].includes(" ") ){
-          newImage.src = url[i]
-          dbImagesLetras.push(newImage)
-      }else{
-        newImage.src = url[i].replace(' ','space')
-        
-         dbImagesLetras.push(newImage)
-      }  
-    
-    /*if(url[i] != " "){
+    if(! url[i].includes(" ") ){
       newImage.src = url[i]
       dbImagesLetras.push(newImage)
     }else{
-      newImage.src = "https://"
+      newImage.src = url[i].replace(' ','space')
+      
        dbImagesLetras.push(newImage)
-    } */ 
+    }  
   }
   var allLoaded = 0;
   var allImages = 0;
