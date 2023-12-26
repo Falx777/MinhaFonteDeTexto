@@ -7,7 +7,7 @@ var ctx = canvas.getContext('2d');
 var dbImagesLetras = []
 //var newImage = new Image(); 
 function converterTexto(){
-  var textoBase = ((document.getElementById("texto").value).replace('/\n/g'," ")).split('');
+  var textoBase = ((document.getElementById("texto").value).replace(/\n/g," ")).split('');
   for(i=0; i < textoBase.length; i++){
     
     var minus = "_"
